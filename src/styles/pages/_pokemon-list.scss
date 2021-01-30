@@ -1,0 +1,21 @@
+.page-pokemon-list {
+  @extend %container;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.pokemon-list__item {
+  justify-self: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border ease 0.2s;
+
+  &:hover {
+    border: 1px solid $codgray;
+    transition: border ease 0.2s;
+  }
+}

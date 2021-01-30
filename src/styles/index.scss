@@ -1,0 +1,9 @@
+@import "meyerweb.css";
+@import "var.scss";
+@import "style.scss";
+
+//components
+@import "/components/pokemon-insert.scss";
+
+//pages
+@import "/pages/pokemon-list.scss";
