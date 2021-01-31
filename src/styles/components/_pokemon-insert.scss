@@ -1,5 +1,113 @@
 .pokemon-insert {
   padding: 10px;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 62px;
+    position: absolute;
+    background: #eaeaea;
+    z-index: -1;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: width ease 0.2s, height ease 0.2s;
+    opacity: 0.75;
+  }
+
+  &:hover:before {
+    width: 81px;
+    height: 81px;
+    transition: width ease 0.2s, height ease 0.2s;
+  }
+
+  &:hover .pokemon-insert__image {
+    transform: translateY(-3px);
+    transition: transform ease 0.2s;
+  }
+
+  &_normal {
+    &:before {
+      background-color: $normal;
+    }
+  }
+  &_fire {
+    &:before {
+      background-color: $fire;
+    }
+  }
+  &_water {
+    &:before {
+      background-color: $water;
+    }
+  }
+  &_electric {
+    &:before {
+      background-color: $electric;
+    }
+  }
+  &_grass {
+    &:before {
+      background-color: $grass;
+    }
+  }
+  &_ice {
+    &:before {
+      background-color: $grass;
+    }
+  }
+  &_fighting {
+    &:before {
+      background-color: $fighting;
+    }
+  }
+  &_poison {
+    &:before {
+      background-color: $poison;
+    }
+  }
+  &_ground {
+    &:before {
+      background-color: $ground;
+    }
+  }
+  &_flying {
+    &:before {
+      background-color: $flying;
+    }
+  }
+  &_psychic {
+    &:before {
+      background-color: $psychic;
+    }
+  }
+  &_bug {
+    &:before {
+      background-color: $bug;
+    }
+  }
+  &_rock {
+    &:before {
+      background-color: $rock;
+    }
+  }
+  &_ghost {
+    &:before {
+      background-color: $ghost;
+    }
+  }
+  &_dragon {
+    &:before {
+      background-color: $dragon;
+    }
+  }
 }
 
 .pokemon-insert__name {
@@ -11,4 +119,5 @@
 
 .pokemon-insert__image {
   display: block;
+  transition: transform ease 0.2s;
 }
