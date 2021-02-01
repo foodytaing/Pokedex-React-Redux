@@ -3,8 +3,9 @@
 }
 
 .pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pokemon-list__item {

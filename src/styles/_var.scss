@@ -1,7 +1,22 @@
 // colors
 $codgray: #181818;
 
-// breakpoint
+// mixin
+@mixin start-at-mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin start-at-tablet {
+  @media (min-width: 577px) {
+    @content;
+  }
+}
+@mixin start-at-desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
 
 // background colors pokemon type
 $normal: #b3b28b;

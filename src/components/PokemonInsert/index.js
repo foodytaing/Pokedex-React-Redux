@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LazyLoad from "react-lazyload";
 import axios from "axios";
 
 const Index = (props) => {
@@ -33,11 +34,13 @@ const Index = (props) => {
     <>
       <div className={`pokemon-insert_${pkm?.type} pokemon-insert`}>
         <span className="pokemon-insert__name">{pkm?.name}</span>
-        <img
-          className="pokemon-insert__image"
-          src={pkm?.sprite}
-          alt={pkm?.name}
-        />
+        <LazyLoad>
+          <img
+            className="pokemon-insert__image"
+            src={pkm?.sprite}
+            alt={pkm?.name}
+          />
+        </LazyLoad>
       </div>
     </>
   );
